@@ -1,30 +1,29 @@
 # Khazix Skills
 
-数字生命卡兹克开源的 AI Skills 合集。
+数字生命卡兹克的 AI 工具箱。
 
 这里是我自己在用的、经过长期打磨的 Prompts 和 Skills，现在决定把它们完整地、一字不改地开源出来。
 
-## 什么是 Skill
+两种东西，一个目的：把我积累的方法论变成可复用的工具。
 
-Skill 是遵循 [Agent Skills](https://agentskills.io) 开放标准的结构化指令集，由包含指令、脚本和参考资源的文件夹组成，用于扩展 AI Agent 的能力边界。Agent 会在相关场景下自动加载对应的 Skill，你也可以通过 `/skill-name` 手动调用。
+- **Prompts** — 轻量级，复制粘贴到任何 AI 对话或 Deep Research 里就能用
+- **Skills** — 重量级，遵循 [Agent Skills](https://agentskills.io) 开放标准的结构化指令集，安装后 Agent 会自动加载
 
-Skill 的设计理念是**可组合、可移植、按需加载**。多个 Skill 可以协同工作，同一个 Skill 可以跨工具使用。它让你能够把领域专业知识打包成 AI 可以复用的模块，在特定场景下按照这套方法论来执行任务。
+## Prompts
 
-## 已开源的 Prompts
+| Prompt | 说明 | 用法 |
+|--------|------|------|
+| [**横纵分析法**](./prompts/横纵分析法.md) | 通用深度研究框架，融合历时-共时分析与竞争战略视角，半小时出一份万字级研究报告 | 复制 Prompt，修改「研究对象」，丢进任何支持 Deep Research 的模型 |
 
-| Prompt | 说明 |
-|--------|------|
-| [**横纵分析法**](./prompts/横纵分析法.md) | 通用深度研究 Prompt，融合历时-共时分析与竞争战略视角，半小时出一份一两万字的研究报告 |
-
-## 已开源的 Skills
+## Skills
 
 | Skill | 说明 |
 |-------|------|
 | [**khazix-writer**](./khazix-writer/) | 卡兹克公众号长文写作 Skill，包含完整的写作风格规则、四层自检体系、内容方法论和风格示例库 |
 
-## 安装
+### Skill 安装方式
 
-### 通过 Agent 安装
+**通过 Agent 安装**
 
 在 Claude Code、Codex、OpenClaw 等支持 Skill 的 Agent 中，直接对话：
 
@@ -32,7 +31,7 @@ Skill 的设计理念是**可组合、可移植、按需加载**。多个 Skill 
 安装这个 skill：https://github.com/KKKKhazix/khazix-skills
 ```
 
-### 手动安装
+**手动安装**
 
 1. 在本仓库的 [Releases](https://github.com/KKKKhazix/khazix-skills/releases) 页面下载对应 Skill 的 `.skill` 安装包
 2. 将 `.skill` 文件拖动到对应工具的 Skills 目录下
